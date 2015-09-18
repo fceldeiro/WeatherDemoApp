@@ -1,0 +1,39 @@
+{
+	"cities" : [
+		{
+			"city" : "London",
+			"country" : "UK",
+			"imageURL" : "http://scontent-a.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/10932167_831556373568695_682235807_n.jpg"
+		},
+		{
+			"city" : "Buenos Aires",
+			"country" : "Argentina",
+			"imageURL" : "https://farm6.staticflickr.com/5124/5232751395_65f958bf47_n.jpg"
+		},
+		{
+			"city" : "New York",
+			"country" : "USA",
+			"imageURL" : "https://farm6.staticflickr.com/5561/14898578526_f70a41feba_n.jpg"
+		},
+		{
+			"city" : "Paris",
+			"country" : "France",
+			"imageURL" : "https://farm8.staticflickr.com/7173/6430801277_9c4a194fe7_n.jpg"
+		},
+		{
+			"city" : "San Diego",
+			"country" : "USA",
+			"imageURL" : "https://farm9.staticflickr.com/8437/7927292368_dc61c3a07d_n.jpg"
+		},
+		{
+			"city" : "San Francisco",
+			"country" : "USA",
+			"imageURL" : "https://farm7.staticflickr.com/6065/6039774815_4310029241_n.jpg"
+		},
+		{
+			"city" : "Betzlandia",
+			"country" : "Argentina",
+			"imageURL" : "https://farm8.staticflickr.com/7507/16115850916_b912f37cda_n.jpg"
+		}
+	]
+}

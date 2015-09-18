@@ -1,0 +1,19 @@
+sudo: false
+language: objective-c
+cache: cocoapods
+branches:
+  only:
+  - develop
+  - master
+script:
+- xctool -workspace MyWeather.xcworkspace -scheme MyWeather -sdk iphonesimulator8.1 -destination "platform=iOS Simulator,OS=8.1,name=iPhone 5s" -configuration Debug test -freshInstall -freshSimulator -only UnitTests OS_SIMULATOR=8.1
+
+env:
+  global:
+  - APP_NAME="MyWeather"
+  - MOCK_SERVER_DIR="${TRAVIS_BUILD_DIR}/MockServer"
+  - SCRIPTS_DIR="${TRAVIS_BUILD_DIR}/scripts"
+
+matrix:
+  - TEST_TARGET=UnitTest OS_SIMULATOR=8.1
+  

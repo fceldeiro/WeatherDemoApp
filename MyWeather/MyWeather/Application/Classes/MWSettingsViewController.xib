@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MWSettingsViewController">
+            <connections>
+                <outlet property="imageViewBackground" destination="hny-d9-e9M" id="hEn-l3-cW3"/>
+                <outlet property="labelTitle" destination="qef-vO-26a" id="EUc-IQ-sFD"/>
+                <outlet property="pickerView" destination="qAn-Wo-FJF" id="h5D-wp-bhQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hny-d9-e9M">
+                    <rect key="frame" x="-10" y="-10" width="620" height="620"/>
+                </imageView>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAn-Wo-FJF">
+                    <rect key="frame" x="0.0" y="405" width="600" height="180"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ufF-Cq-R3q"/>
+                        <outlet property="delegate" destination="-1" id="G8u-o8-adl"/>
+                    </connections>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celcius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qef-vO-26a">
+                    <rect key="frame" x="259" y="206" width="82" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-fy-ToX">
+                    <rect key="frame" x="-5" y="4" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="JeS-TK-uCW"/>
+                        <constraint firstAttribute="width" constant="60" id="UA6-Sm-w7f"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="-50" minY="-50" maxX="-50" maxY="-50"/>
+                    <state key="normal" image="mw_iconcancel.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnCancelPressed:" destination="-1" eventType="touchUpInside" id="iT6-fd-WNZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-bt-FCh">
+                    <rect key="frame" x="558" y="18" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="0ed-un-zFd"/>
+                        <constraint firstAttribute="height" constant="32" id="4h2-Ni-qCL"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="-30" minY="-30" maxX="-30" maxY="-30"/>
+                    <state key="normal" image="mw_icondone.png"/>
+                    <connections>
+                        <action selector="onBtnDonePressed:" destination="-1" eventType="touchUpInside" id="T8U-Bi-gN4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hny-d9-e9M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-10" id="0aq-eE-Erf"/>
+                <constraint firstItem="hny-d9-e9M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-10" id="11Z-Lm-PPz"/>
+                <constraint firstAttribute="centerX" secondItem="qef-vO-26a" secondAttribute="centerX" id="2rb-E4-ekR"/>
+                <constraint firstAttribute="trailing" secondItem="yuI-bt-FCh" secondAttribute="trailing" constant="10" id="83E-wA-PUt"/>
+                <constraint firstAttribute="trailing" secondItem="qAn-Wo-FJF" secondAttribute="trailing" id="8bc-uu-zTL"/>
+                <constraint firstItem="yuI-bt-FCh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="F5e-ld-5vt"/>
+                <constraint firstAttribute="bottom" secondItem="qAn-Wo-FJF" secondAttribute="bottom" id="IXf-ye-6Ln"/>
+                <constraint firstItem="qAn-Wo-FJF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nwy-p6-8aX"/>
+                <constraint firstItem="pqA-fy-ToX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-5" id="QE9-1R-IwK"/>
+                <constraint firstAttribute="bottom" secondItem="hny-d9-e9M" secondAttribute="bottom" constant="-10" id="QTo-ri-7rw"/>
+                <constraint firstAttribute="centerY" secondItem="qef-vO-26a" secondAttribute="centerY" constant="80" id="R5o-Ba-cv2"/>
+                <constraint firstItem="qAn-Wo-FJF" firstAttribute="top" secondItem="qef-vO-26a" secondAttribute="bottom" constant="154" id="lC1-Lv-ZHp"/>
+                <constraint firstItem="pqA-fy-ToX" firstAttribute="centerY" secondItem="yuI-bt-FCh" secondAttribute="centerY" id="r93-Lg-W16"/>
+                <constraint firstAttribute="trailing" secondItem="hny-d9-e9M" secondAttribute="trailing" constant="-10" id="syZ-p8-whS"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="158" y="220"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mw_iconcancel.png" width="32" height="32"/>
+        <image name="mw_icondone.png" width="32" height="32"/>
+    </resources>
+</document>
